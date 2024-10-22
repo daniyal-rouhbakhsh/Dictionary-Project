@@ -1,0 +1,107 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgba(43, 43, 43, 0.866);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.dictionary-container{
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    width: 50rem;
+    background-color: gray;
+    padding: 2rem;
+    align-items: center;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.search-container{
+    display: flex;
+    gap: 0.5rem;
+}
+#search-input{
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 5px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+}
+
+.result-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 5s ease-in;
+    -webkit-transition: max-height 5s ease-in;
+    -moz-transition: max-height 5s ease-in;
+    -ms-transition: max-height 5s ease-in;
+    -o-transition: max-height 5s ease-in;
+}
+.result-container.visible{
+    max-height: 200rem;
+}
+.audio-btn{
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.audio-btn i{
+    font-size: 1.2rem;
+    color: #fff;
+}
+.word-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#search-btn{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 7rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.main-word{
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+.result-error{
+    font-size: 1.5rem;
+    color: red;
+    display: none;
+}
+.result-error.visible{
+    display: block;
+    text-align: center;
+}
